@@ -274,21 +274,22 @@ def StoreCalendar(cal_df,**kwargs):
             elif index==1:
                 output_file_name=kwargs.get('output_file_name')
                 
-            merged_name,merged_df=MergeCalendar(df,output_file_name)
+            merged_name,merged_df=MergeCalendar(df,output_file_name,**kwargs)
             merged_df.to_excel(os.path.join(output_directory_name,f"{merged_name}.xlsx"),index=False)
 
         driver.quit()
         return alldf
 
       
-def MergeCalendar(new,new_path):
+def MergeCalendar(new,new_path,**kwargs):
     """
     Merges the newly obtained calendar data with old data (if there).
     If the timezone and filtered_countries both the parameters match, only then the merge happens. 
     Else, new files get created.
         
     """
-
+    # Get output_directory name
+    opdc=kwargs.get('output_directory_name')
     # Get timezone and country details from new dataframe
     new_details=(new_path.split('_'))[0:2]
     new_tz=new_details[0]
@@ -296,10 +297,10 @@ def MergeCalendar(new,new_path):
 
     # Scan Input_data for old calendar file path. If not found, take old calendar as empty dataframe
     old=pd.DataFrame()
-    for entry in os.scandir('Input_data'):
+    for entry in os.scandir(opdc):
         if entry.is_file() and entry.name.endswith('.xlsx') and (entry.name.split('_'))[0]==new_tz and (entry.name.split('_'))[1]==new_country:
             print(entry)
-            old_path=os.path.join('Input_data',entry.name)
+            old_path=os.path.join(opdc,entry.name)
             old=pd.read_excel(old_path).copy()
             break
     
