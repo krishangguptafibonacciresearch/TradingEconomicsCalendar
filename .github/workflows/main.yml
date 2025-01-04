@@ -32,7 +32,7 @@ jobs:
         pip install openpyxl
         
     - name: Run Python script
-      run: python myrunnermain.py  # Replace with your actual Python script name
+      run: python event_calendar_runner_main_github_actions.py  # Replace with your actual Python script name
 
     - name: Configure Git user
       run: |
