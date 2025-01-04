@@ -31,7 +31,7 @@ jobs:
         pip install chromedriver_autoinstaller
         
     - name: Run Python script
-      run: python event_calendar_runner_main.py  # Replace with your actual Python script name
+      run: python myrunnermain.py  # Replace with your actual Python script name
 
     - name: Configure Git user
       run: |
