@@ -10,7 +10,8 @@ import time
 import pandas as pd
 import os
 import traceback as trb
-import openpyxl
+#from returns_main import input_folder
+
 def FormatDate(DateStr):
     """
     Convert Date from default to YYYY-MM-DD
@@ -339,10 +340,10 @@ def MergeCalendar_helper(olddf,newdf):
    
     # Filter out dates from 'DATE' and remove rows with time in old and new calendar
     old_datesdf=(olddf[olddf['DATE'].str.len()>8])
-    old_datesdf=old_datesdf.dropna()
+    #old_datesdf=old_datesdf.dropna()
 
     new_datesdf=(newdf[newdf['DATE'].str.len()>8])
-    new_datesdf=new_datesdf.dropna()
+    #new_datesdf=new_datesdf.dropna()
 
     # Find the first common date in both calendars
     common_dates = set(old_datesdf['DATE']).intersection(set(new_datesdf['DATE']))
