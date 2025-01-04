@@ -29,6 +29,7 @@ jobs:
         pip install bs4
         pip install pyvirtualdisplay
         pip install chromedriver_autoinstaller
+        pip install openpyxl
         
     - name: Run Python script
       run: python myrunnermain.py  # Replace with your actual Python script name
