@@ -27,6 +27,8 @@ jobs:
         pip install numpy
         pip install selenium
         pip install bs4
+        pip install pyvirtualdisplay
+        pip install chromedriver_autoinstaller
         
     - name: Run Python script
       run: python event_calendar_runner_main.py  # Replace with your actual Python script name
