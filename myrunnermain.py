@@ -77,14 +77,14 @@ def runner(**kwargs):
 # Scatter events by country and timezone
 SelectCountries =  ['US']
 TargetTimezone = {'IST':'UTC +5:30'}
-OutputDirectory='Input_data2'
+OutputDirectory='Input_data'
 runner(OutputDirectory=OutputDirectory,
        TargetTimezone=TargetTimezone,
        SelectCountries=SelectCountries)
 
 SelectCountries =  ['US']
 TargetTimezone = {'EST':'UTC -5'}
-OutputDirectory='Input_data2'
+OutputDirectory='Input_data'
 runner(OutputDirectory=OutputDirectory,
        TargetTimezone=TargetTimezone,
        SelectCountries=SelectCountries)
