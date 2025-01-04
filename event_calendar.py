@@ -11,7 +11,6 @@ import pandas as pd
 import os
 import traceback as trb
 import openpyxl
-
 def FormatDate(DateStr):
     """
     Convert Date from default to YYYY-MM-DD
