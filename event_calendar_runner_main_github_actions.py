@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.service import Service
 import chromedriver_autoinstaller
 from pyvirtualdisplay import Display
 
+
 def runner(**kwargs):
     # Initialize the driver
 
