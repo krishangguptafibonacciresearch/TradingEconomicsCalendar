@@ -12,6 +12,7 @@ import os
 import traceback as trb
 #from returns_main import input_folder
 
+
 def FormatDate(DateStr):
     """
     Convert Date from default to YYYY-MM-DD
