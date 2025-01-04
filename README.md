@@ -6,3 +6,4 @@ event_calendar_runner_main.py runs the code on local machine.
 
 Both call the event_calendar.py file
 
+Check Input_data folder for the files
